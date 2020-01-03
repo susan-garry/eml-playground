@@ -1,0 +1,33 @@
+	This file will help you learn to use the Epistemic Modal Logic Playground! It contains details on what features the 
+playground contains and how you can use them in your modal. 
+	The evaluate a formula feature allows you to evaluate propositional formulas at this model (modal evaluations coming soon)!
+The formula will be evaluated at the world currently selected to display. To evaluate atoms, type the name of the atom. Try
+using the following commands for other formula components. Here, F is any formula:
+
+		English        		||   Modal Language
+		Not F           	 -        ~F
+		F1 and F2       	 -      F1 & F2
+		F1 or F2        	 -      F1 | F2
+		F1 implies F2   	 -      F1 -> F2
+		F1 iff F2       	 -      F1 <-> F2
+		agent A knows F		 -		K[A](F)
+		For all agent A
+			knows, F		 -		M[A](F)
+
+		
+IMPORTANT: With the exception of the not operator, you MUST include exactly one space on either side of an operator between the 
+two formulas that it connects! For example, F1 & F2 and F1 & F2 | F3 are valid formulas, but F1&F2 and F1  |  F2 are not
+For the not operator, make sure that there are no spaces between it and the formula that it is negating. ~F is a valid formula, 
+but ~ F is not a valid formula. The code currently cannot distinguish between formulas that are false and formulas that are 
+syntactically incorrect, so make sure to pay close attention to the syntax of your formulas. You can also stack this operator!
+Try it!
+Note that the program is now capable of processing the K and M operators! It can also now parse parthenetical operators around
+complex formulas, e.g. ones that contain at least one other operator. Use the syntax "(F1 * F2)", with no spaces between your 
+formula and the enclosing parenthesis.
+
+On Valid Names:
+	Because the program relies on the syntax of how modal formulas are typed in order to decipher them, there are some potential
+names for agents and atoms that the program will not allow you to use. Neither agents nor atoms can contain parenthesis
+or braces, and atoms are not allowed to begin with a capital 'K' or capital 'M', since these are the symbols for "knows"
+and "might be the case that". The names of atoms are also not allowed to contain spaces. There is only one restriction on the
+naming of worlds: no world may be named "all".
