@@ -5,6 +5,7 @@
 *.log
 
 # eclipse files
+.bin
 .settings
 .classpath
 .DS_Store
